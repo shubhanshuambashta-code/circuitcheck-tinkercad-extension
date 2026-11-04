@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "CircuitCheck for Tinkercad",
+  "description": "Review the connectivity recorded in an exported Tinkercad Circuits board.",
+  "version": "0.1.0",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_title": "CircuitCheck for Tinkercad",
+    "default_popup": "popup.html"
+  }
+}

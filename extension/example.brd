@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="9.6.2">
+  <drawing>
+    <board>
+      <elements>
+        <element name="R1"/>
+        <element name="D1"/>
+        <element name="J1"/>
+      </elements>
+      <signals>
+        <signal name="LED">
+          <contactref element="R1" pad="2"/>
+          <contactref element="D1" pad="A"/>
+        </signal>
+        <signal name="GND">
+          <contactref element="D1" pad="K"/>
+        </signal>
+      </signals>
+    </board>
+  </drawing>
+</eagle>

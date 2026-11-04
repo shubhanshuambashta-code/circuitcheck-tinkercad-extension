@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CircuitCheck for Tinkercad</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">TINKERCAD CIRCUITS</p>
+      <h1>CircuitCheck</h1>
+      <p>Review the connectivity recorded in a board export.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="import-title">
+      <h2 id="import-title">Import a board</h2>
+      <p id="instructions">In Tinkercad Circuits, open <strong>Send To</strong> or <strong>Export</strong> and download the EAGLE board when available.</p>
+      <div class="actions">
+        <button type="button" id="choose" aria-describedby="instructions file-hint">Choose .brd file</button>
+        <input type="file" id="board-file" accept=".brd" hidden>
+        <button type="button" id="sample" class="secondary">Try an example</button>
+      </div>
+      <p id="file-hint" class="small">EAGLE XML · Up to 5 MB · Processed locally</p>
+      <p id="status" role="status" class="small"></p>
+      <p id="error" role="alert" class="small error"></p>
+    </section>
+
+    <section id="report" class="panel" aria-labelledby="report-title" hidden>
+      <h2 id="report-title">Board review</h2>
+      <p id="source" class="small"></p>
+      <dl class="metrics">
+        <div><dt>Components</dt><dd id="components"></dd></div>
+        <div><dt>Signals</dt><dd id="signals"></dd></div>
+        <div><dt>Contacts</dt><dd id="contacts"></dd></div>
+      </dl>
+      <p id="finding-summary"></p>
+      <ol id="findings"></ol>
+    </section>
+
+    <footer class="small">
+      Coverage is limited to exported component references and signal contacts. Simulation, wiring omitted from the export, and PCB design rules are outside this review.
+    </footer>
+  </main>
+</body>
+</html>
